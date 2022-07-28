@@ -42,10 +42,10 @@ public class Member {
     private int salary;
 
     @OneToMany(mappedBy = "applicant")
-    private List<Matching> fromMatchingList;
+    private List<Matching> fromMatchingList = new ArrayList<Matching>();
 
     @OneToMany(mappedBy = "respondent")
-    private List<Matching> toMatchingList;
+    private List<Matching> toMatchingList = new ArrayList<Matching>();;
 
     @OneToOne
     private MyType myType;
