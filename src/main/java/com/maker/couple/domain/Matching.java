@@ -21,11 +21,11 @@ public class Matching {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "applicant_member_id")
     private Member applicant;
 
     @ManyToOne
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "respondent_member_id")
     private Member respondent;
 
     @Temporal(TemporalType.DATE)
@@ -34,9 +34,5 @@ public class Matching {
 
     @Enumerated(EnumType.STRING)
     private MatchResult matchResult;
-
-    @ManyToOne
-    @JoinColumn(name = "member_id")
-    private Member member;
 
 }
